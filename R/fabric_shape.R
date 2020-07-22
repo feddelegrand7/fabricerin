@@ -8,9 +8,15 @@ fabric_shape <- function(id,
                          top,
                          fill,
                          width,
-                         height){
+                         height,
+                         angle = 0,
+                         opacity = 1,
+                         strokecolor = "red",
+                         strokewidth = 5,
+                         selectable = TRUE){
 
 
+selectable <- ifelse(selectable == TRUE, "true", "false")
 
 htmltools::tagList(
 
@@ -32,7 +38,17 @@ fill: '{fill}',
 
 width: {width},
 
-height: {height}
+height: {height},
+
+angle: {angle},
+
+opacity: {opacity},
+
+stroke: '{strokecolor}',
+
+strokeWidth: {strokewidth},
+
+selectable: {selectable}
 
 }});
 
