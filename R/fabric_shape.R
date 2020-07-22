@@ -19,7 +19,7 @@ htmltools::tagList(
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
 
-var canvas = new fabric.Canvas('c');
+var canvas = new fabric.Canvas('{id}');
 
 var shape = new fabric.{shape}({{
 
