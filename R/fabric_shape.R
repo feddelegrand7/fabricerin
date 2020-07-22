@@ -29,7 +29,7 @@ htmltools::tagList(
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
 
-var canvas = new fabric.Canvas('{id}');
+var {id} = new fabric.Canvas('{id}');
 
 var shape = new fabric.{shape}({{
 
@@ -58,7 +58,7 @@ selectable: {selectable},
 
 }});
 
-canvas.add(shape);
+{id}.add(shape);
 
 
   "
