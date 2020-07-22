@@ -10,9 +10,13 @@ fabric_images <- function(
                           left = 100,
                           top = 100,
                           angle = 0,
-                          opacity = 1
+                          opacity = 1,
+                          selectable = TRUE
 
                           ){
+
+  selectable <- ifelse(selectable == TRUE, "true", "false")
+
 
 
   htmltools::tagList(
@@ -34,7 +38,9 @@ fabric_images <- function(
         width: {imgwidth},
         height: {imgheight},
         left: {left},
-        top: {top}
+        top: {top},
+        selectable: {selectable}
+
     }});
 
     canvas.add(pug);
