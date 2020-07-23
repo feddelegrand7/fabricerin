@@ -21,7 +21,8 @@ fabric_text <- function(id,
                         selectable = TRUE,
                         shadow = FALSE,
                         shadowCol = "#324C63",
-                        textAlign = "center"){
+                        textAlign = "center",
+                        lineHeight = 1){
 
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
@@ -63,6 +64,7 @@ fabric_text <- function(id,
   stroke: '{strokecolor}',
   strokeWidth: {strokewidth},
   textAlign: '{textAlign}',
+  lineHeight: {lineHeight},
   selectable: {selectable},
   {shadow}
 
