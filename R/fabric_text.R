@@ -11,6 +11,7 @@ fabric_text <- function(id,
                         opacity = 1,
                         fontFamily = 'Comic Sans',
                         fontSize = 40,
+                        fontStyle = 'normal',
                         strokecolor = "#282A36",
                         strokewidth = 1,
                         fontWeight = "normal",
@@ -19,7 +20,8 @@ fabric_text <- function(id,
                         overline = FALSE,
                         selectable = TRUE,
                         shadow = FALSE,
-                        shadowCol = "#324C63"){
+                        shadowCol = "#324C63",
+                        textAlign = "center"){
 
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
@@ -50,6 +52,7 @@ fabric_text <- function(id,
   top: {top},
   fontFamily: '{fontFamily}',
   fontSize: {fontSize},
+  fontStyle: '{fontStyle}',
   fontWeight: '{fontWeight}',
   underline: {underline},
   linethrough: {underline},
@@ -59,6 +62,7 @@ fabric_text <- function(id,
   opacity: {opacity},
   stroke: '{strokecolor}',
   strokeWidth: {strokewidth},
+  textAlign: '{textAlign}',
   selectable: {selectable},
   {shadow}
 
