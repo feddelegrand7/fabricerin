@@ -1,12 +1,12 @@
 
-fabric_images <- function(
+fabric_image <- function(
                           cid,
                           cwidth = 800,
                           cheight = 600,
-                          imgid,
                           imgsrc,
                           imgwidth = 500,
                           imgheight = 500,
+                          imgscale = 1,
                           left = 100,
                           top = 100,
                           angle = 0,
@@ -27,26 +27,26 @@ fabric_images <- function(
 
 
   "
-  var canvas = new fabric.Canvas('{cid}');
+  var {cid} = new fabric.Canvas('{cid}');
 
-  var pugImg = new Image();
 
-  pugImg.onload = function (img) {{
+ fabric.Image.fromURL('{imgsrc}', function(myImg) {{
 
-    var pug = new fabric.Image(pugImg, {{
-        angle: {angle},
-        width: {imgwidth},
-        height: {imgheight},
-        left: {left},
-        top: {top},
-        selectable: {selectable}
+ var img1 = myImg.set({{
+ left: {left},
+ top: {top},
+ angle: {angle},
+ opacity: {opacity},
+ selectable: {selectable}
 
-    }});
+  }});
 
-    canvas.add(pug);
-}};
-pugImg.src = '{imgsrc}';
+ img1.scaleToHeight({imgheight});
+ img1.scaleToWidth({imgwidth});
 
+ {cid}.add(img1);
+
+  });
 
   "
     )))
