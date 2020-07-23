@@ -4,11 +4,12 @@ fabric_image_add <- function(cid,
                              imgsrc,
                              imgwidth = 500,
                              imgheight = 500,
-                             imgscale = 1,
                              left = 100,
                              top = 100,
                              angle = 0,
                              opacity = 1,
+                             strokecolor = "darkblue",
+                             strokewidth = 5,
                              selectable = TRUE) {
 
 
@@ -25,6 +26,8 @@ fabric_image_add <- function(cid,
  top: {top},
  angle: {angle},
  opacity: {opacity},
+ stroke: '{strokecolor}',
+ strokeWidth: {strokewidth},
  selectable: {selectable}
 
   }});

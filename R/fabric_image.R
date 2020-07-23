@@ -3,14 +3,16 @@ fabric_image <- function(
                           cid,
                           cwidth = 800,
                           cheight = 600,
+                          cfill = "#FFFFFF",
                           imgsrc,
                           imgwidth = 500,
                           imgheight = 500,
-                          imgscale = 1,
                           left = 100,
                           top = 100,
                           angle = 0,
                           opacity = 1,
+                          strokecolor = "darkblue",
+                          strokewidth = 5,
                           selectable = TRUE
 
                           ){
@@ -29,6 +31,7 @@ fabric_image <- function(
   "
   var {cid} = new fabric.Canvas('{cid}');
 
+  {cid}.backgroundColor = '{cfill}';
 
  fabric.Image.fromURL('{imgsrc}', function(myImg) {{
 
@@ -37,6 +40,8 @@ fabric_image <- function(
  top: {top},
  angle: {angle},
  opacity: {opacity},
+ stroke: '{strokecolor}',
+ strokeWidth: {strokewidth},
  selectable: {selectable}
 
   }});
