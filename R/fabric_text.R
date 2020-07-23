@@ -22,7 +22,10 @@ fabric_text <- function(id,
                         shadow = FALSE,
                         shadowCol = "#324C63",
                         textAlign = "center",
-                        lineHeight = 1){
+                        lineHeight = 1,
+                        textBackgroundColor = NULL){
+
+
 
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
@@ -34,6 +37,9 @@ fabric_text <- function(id,
   overline <- ifelse(overline == TRUE, "true", "false")
 
   shadow <- ifelse(shadow == TRUE, glue::glue("shadow:'{shadowCol} 5px 5px 5px'"), "")
+
+  tBG <- ifelse(is.null(textBackgroundColor), character(0), glue::glue("textBackgroundColor: '{textBackgroundColor}',"))
+
 
 
   htmltools::tagList(
@@ -65,6 +71,7 @@ fabric_text <- function(id,
   strokeWidth: {strokewidth},
   textAlign: '{textAlign}',
   lineHeight: {lineHeight},
+  {tBG}
   selectable: {selectable},
   {shadow}
 
@@ -73,7 +80,7 @@ fabric_text <- function(id,
   {id}.add(text);
 
   "
-    )))
+    , .na = "")))
 
 
 
