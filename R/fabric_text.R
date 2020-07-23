@@ -1,0 +1,116 @@
+
+fabric_text <- function(id,
+                        cwidth = 800,
+                        cheight = 600,
+                        cfill = "#FFFFFF",
+                        text,
+                        left = 100,
+                        top = 100,
+                        fill = "#2F3941",
+                        angle = 0,
+                        opacity = 1,
+                        fontFamily = 'Comic Sans',
+                        fontSize = 40,
+                        strokecolor = "#282A36",
+                        strokewidth = 1,
+                        fontWeight = "normal",
+                        underline = FALSE,
+                        linethrough = FALSE,
+                        overline = FALSE,
+                        selectable = TRUE,
+                        shadow = FALSE,
+                        shadowCol = "#324C63"){
+
+
+  selectable <- ifelse(selectable == TRUE, "true", "false")
+
+  underline <- ifelse(underline == TRUE, "true", "false")
+
+  linethrough <- ifelse(linethrough == TRUE, "true", "false")
+
+  overline <- ifelse(overline == TRUE, "true", "false")
+
+  shadow <- ifelse(shadow == TRUE, glue::glue("shadow:'{shadowCol} 5px 5px 5px'"), "")
+
+
+  htmltools::tagList(
+
+    htmltools::tags$canvas(id = id, width = cwidth, height = cheight),
+
+    htmltools::tags$script(htmltools::HTML(glue::glue(
+      "
+
+  var {id} = new fabric.Canvas('{id}');
+
+  {id}.backgroundColor = '{cfill}';
+
+  var text = new fabric.Text('{text}', {{
+
+  left: {left},
+  top: {top},
+  fontFamily: '{fontFamily}',
+  fontSize: {fontSize},
+  fontWeight: '{fontWeight}',
+  underline: {underline},
+  linethrough: {underline},
+  overline: {underline},
+  fill: '{fill}',
+  angle: {angle},
+  opacity: {opacity},
+  stroke: '{strokecolor}',
+  strokeWidth: {strokewidth},
+  selectable: {selectable},
+  {shadow}
+
+}});
+
+  {id}.add(text);
+
+  "
+    )))
+
+
+
+  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
