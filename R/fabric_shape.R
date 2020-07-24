@@ -16,6 +16,7 @@ fabric_shape <- function(cid,
                          strokecolor = "darkblue",
                          strokewidth = 5,
                          selectable = TRUE,
+                         isDrawingMode = FALSE,
                          radius = NULL){
 
 
@@ -24,6 +25,9 @@ radius <- ifelse(!is.null(radius), glue::glue("radius:{radius}"), "")
 
 selectable <- ifelse(selectable == TRUE, "true", "false")
 
+isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
+
+
 htmltools::tagList(
 
   htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
@@ -31,7 +35,11 @@ htmltools::tagList(
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
 
-var {cid} = new fabric.Canvas('{cid}');
+var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
 
 {cid}.backgroundColor = '{cfill}';
 

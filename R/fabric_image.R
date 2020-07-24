@@ -14,13 +14,14 @@ fabric_image <- function(
                           opacity = 1,
                           strokecolor = "darkblue",
                           strokewidth = 5,
-                          selectable = TRUE
+                          selectable = TRUE,
+                          isDrawingMode = FALSE
 
                           ){
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
-
+  isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
 
   htmltools::tagList(
 
@@ -30,7 +31,11 @@ fabric_image <- function(
 
 
   "
-  var {cid} = new fabric.Canvas('{cid}');
+  var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
 
   {cid}.backgroundColor = '{cfill}';
 

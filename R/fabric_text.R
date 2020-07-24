@@ -24,12 +24,15 @@ fabric_text <- function(cid,
                         shadowCol = "#324C63",
                         textAlign = "center",
                         lineHeight = 1,
-                        textBackgroundColor = NULL){
+                        textBackgroundColor = NULL,
+                        isDrawingMode = FALSE){
 
 
 
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
+
+  isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
 
   underline <- ifelse(underline == TRUE, "true", "false")
 
@@ -50,7 +53,11 @@ fabric_text <- function(cid,
     htmltools::tags$script(htmltools::HTML(glue::glue(
       "
 
-  var {cid} = new fabric.Canvas('{cid}');
+  var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
 
   {cid}.backgroundColor = '{cfill}';
 
