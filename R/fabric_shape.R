@@ -1,9 +1,10 @@
 
 
-fabric_shape <- function(id,
+fabric_shape <- function(cid,
                          cwidth = 800,
                          cheight = 600,
                          cfill = "#FFFFFF",
+                         shapeId,
                          shape = "Rect",
                          left = 100,
                          top = 100,
@@ -25,16 +26,16 @@ selectable <- ifelse(selectable == TRUE, "true", "false")
 
 htmltools::tagList(
 
-  htmltools::tags$canvas(id = id, width = cwidth, height = cheight),
+  htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
 
-var {id} = new fabric.Canvas('{id}');
+var {cid} = new fabric.Canvas('{cid}');
 
-{id}.backgroundColor = '{cfill}';
+{cid}.backgroundColor = '{cfill}';
 
-var shape = new fabric.{shape}({{
+var {shapeId} = new fabric.{shape}({{
 
 left: {left},
 top: {top},
@@ -51,7 +52,7 @@ selectable: {selectable},
 
 }});
 
-{id}.add(shape);
+{cid}.add({shapeId});
 
 
   "
