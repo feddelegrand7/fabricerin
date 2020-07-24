@@ -43,6 +43,7 @@ var {cid} = new fabric.Canvas('{cid}', {{
 
 {cid}.backgroundColor = '{cfill}';
 
+
 var {shapeId} = new fabric.{shape}({{
 
 left: {left},
