@@ -1,7 +1,8 @@
 
 
 
-fabric_shape_add <- function(id,
+fabric_shape_add <- function(cid,
+                             shapeId,
                              shape = "Rect",
                              left = "150",
                              top = "150",
@@ -23,7 +24,7 @@ fabric_shape_add <- function(id,
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
 
-var shape = new fabric.{shape}({{
+var {shapeId} = new fabric.{shape}({{
 
 left: {left},
 
@@ -49,7 +50,7 @@ selectable: {selectable},
 
 }});
 
-{id}.add(shape);
+{cid}.add({shapeId});
 
 
   "
