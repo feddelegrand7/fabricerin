@@ -1,7 +1,4 @@
-fabric_text <- function(id,
-                        cwidth = 800,
-                        cheight = 600,
-                        cfill = "#FFFFFF",
+fabric_text <- function(cid,
                         textId,
                         text,
                         left = 100,
@@ -41,17 +38,8 @@ fabric_text <- function(id,
   tBG <- ifelse(is.null(textBackgroundColor), character(0), glue::glue("textBackgroundColor: '{textBackgroundColor}',"))
 
 
-
-  htmltools::tagList(
-
-    htmltools::tags$canvas(id = id, width = cwidth, height = cheight),
-
     htmltools::tags$script(htmltools::HTML(glue::glue(
       "
-
-  var {id} = new fabric.Canvas('{id}');
-
-  {id}.backgroundColor = '{cfill}';
 
   var {textId} = new fabric.Text('{text}', {{
 
@@ -77,10 +65,10 @@ fabric_text <- function(id,
 
 }});
 
-  {id}.add({textId});
+  {cid}.add({textId});
 
   "
-      , .na = "")))
+      , .na = ""))
 
 
 
