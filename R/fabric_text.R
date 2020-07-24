@@ -3,6 +3,7 @@ fabric_text <- function(id,
                         cwidth = 800,
                         cheight = 600,
                         cfill = "#FFFFFF",
+                        textId,
                         text,
                         left = 100,
                         top = 100,
@@ -53,7 +54,7 @@ fabric_text <- function(id,
 
   {id}.backgroundColor = '{cfill}';
 
-  var text = new fabric.Text('{text}', {{
+  var {textId} = new fabric.Text('{text}', {{
 
   left: {left},
   top: {top},
@@ -77,7 +78,7 @@ fabric_text <- function(id,
 
 }});
 
-  {id}.add(text);
+  {id}.add({textId});
 
   "
     , .na = "")))

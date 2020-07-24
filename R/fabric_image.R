@@ -4,6 +4,7 @@ fabric_image <- function(
                           cwidth = 800,
                           cheight = 600,
                           cfill = "#FFFFFF",
+                          imgId,
                           imgsrc,
                           imgwidth = 500,
                           imgheight = 500,
@@ -35,7 +36,7 @@ fabric_image <- function(
 
  fabric.Image.fromURL('{imgsrc}', function(myImg) {{
 
- var img1 = myImg.set({{
+ var {imgId} = myImg.set({{
  left: {left},
  top: {top},
  angle: {angle},
@@ -46,10 +47,10 @@ fabric_image <- function(
 
   }});
 
- img1.scaleToHeight({imgheight});
- img1.scaleToWidth({imgwidth});
+ {imgId}.scaleToHeight({imgheight});
+ {imgId}.scaleToWidth({imgwidth});
 
- {cid}.add(img1);
+ {cid}.add({imgId});
 
   });
 
