@@ -14,10 +14,10 @@
 #' @param width the width of the shape. Defaults to 200
 #' @param height the height of the shape. Defaults to 200
 #' @param angle the angle of rotation of the shape. Defaults to 0 (no rotation)
-#' @param opacity the opacity of the shape. Defaults to 1
+#' @param opacity the opacity of the shape (from 0 to 1). Defaults to 1
 #' @param strokecolor the stroke color of the shape. Defaults to 'darkblue'
 #' @param strokewidth the stroke width of the shape. Defaults to 5.
-#' @param selectable logical. If TRUE, the user can modify interactively the shape. Defaults to TRUE
+#' @param selectable logical. If TRUE, the user can modify interactively the shape's size, position and rotation. Defaults to TRUE
 #' @param isDrawingMode logical. If TRUE, the user can draw inside the canvas element.
 #' @param radius Mandatory if the chosen shape is a 'Circle'. Defaults to NULL
 #'

@@ -50,13 +50,13 @@ fabric_shape(
 
 \item{angle}{the angle of rotation of the shape. Defaults to 0 (no rotation)}
 
-\item{opacity}{the opacity of the shape. Defaults to 1}
+\item{opacity}{the opacity of the shape (from 0 to 1). Defaults to 1}
 
 \item{strokecolor}{the stroke color of the shape. Defaults to 'darkblue'}
 
 \item{strokewidth}{the stroke width of the shape. Defaults to 5.}
 
-\item{selectable}{logical. If TRUE, the user can modify interactively the shape. Defaults to TRUE}
+\item{selectable}{logical. If TRUE, the user can modify interactively the shape's size, position and rotation. Defaults to TRUE}
 
 \item{isDrawingMode}{logical. If TRUE, the user can draw inside the canvas element.}
 
