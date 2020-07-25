@@ -22,7 +22,7 @@
 #'              fill = "darkblue"),
 #'
 #'fabric_curtail(cid = "canvas123",
-#'              imgsrc = "https://nitrocdn.com/BzukxzxIDWSkBjOuXIuFVkjjEriFmqlw/assets/static/optimized/rev-0607053/wp-content/uploads/2020/02/Leaves-768x510.jpg",
+#'              imgsrc = ""https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-stock-photo-leaf.jpg"",
 #'              type = "background"
 #'
 #'              )

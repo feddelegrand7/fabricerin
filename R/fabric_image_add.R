@@ -36,9 +36,9 @@
 #'                  left = 400)
 #'                  )
 #'
-#'                  server <- function(input, output) {}
+#'server <- function(input, output) {}
 #'
-#'                  shinyApp(ui = ui, server = server)
+#'shinyApp(ui = ui, server = server)
 #'
 #'}
 

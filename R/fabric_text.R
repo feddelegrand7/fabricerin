@@ -52,6 +52,7 @@
 #'          fontWeight = "bold",
 #'          lineHeight = 3
 #'          )
+#' )
 #'server <- function(input, output) {}
 #'
 #'shinyApp(ui = ui, server = server)
