@@ -1,7 +1,53 @@
 
+#' Add a background or an overlay image to a preexisting canvas
+#'
+#' @param cid the id of the canvas element
+#' @param imgsrc the URL source of the image
+#' @param type whether to use an image as a 'background' or as an 'overlay'
+#'
+#' @return a canvas with a background or overlay image
+#' @export
+#'
+#' @examples
+#'
+#' if (interactive()) {
+#'
+#' ui <- fluidPage(
+#'
+#' use_fabric(),
+#'
+#' fabric_shape(cid = "canvas123",
+#'              shapeId = "tri1",
+#'              shape = "Triangle",
+#'              fill = "darkblue"),
+#'
+#'fabric_curtail(cid = "canvas123",
+#'              imgsrc = "https://nitrocdn.com/BzukxzxIDWSkBjOuXIuFVkjjEriFmqlw/assets/static/optimized/rev-0607053/wp-content/uploads/2020/02/Leaves-768x510.jpg",
+#'              type = "background"
+#'
+#'              )
+#'
+#')
+#'
+#'server <- function(input, output) {}
+#'
+#'
+#'shinyApp(ui = ui, server = server)
+#'
+#'}
+
+
+
+
+
 fabric_curtail <- function(cid,
                            imgsrc,
                            type = "background"){
+
+  if (!type %in% c("background",
+                    "overlay")) {
+    stop(paste0("type accepts two values: 'background' or 'overlay'"))
+  }
 
 
   type <- ifelse(type == "background", "setBackgroundImage", "setOverlayImage")
