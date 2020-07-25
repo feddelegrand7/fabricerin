@@ -2,7 +2,7 @@
 % Please edit documentation in R/fabric_shape_add.R
 \name{fabric_shape_add}
 \alias{fabric_shape_add}
-\title{Add a shape object to existing canvas element}
+\title{Add a shape object to a preexisting canvas element}
 \usage{
 fabric_shape_add(
   cid,
@@ -54,7 +54,7 @@ fabric_shape_add(
 a shape object inside a preexisting canvas element
 }
 \description{
-Add a shape object to existing canvas element
+Add a shape object to a preexisting canvas element
 }
 \examples{
 

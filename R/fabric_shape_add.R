@@ -1,7 +1,7 @@
 
 
 
-#' Add a shape object to existing canvas element
+#' Add a shape object to a preexisting canvas element
 #'
 #' @param cid the id of the canvas element you want to add your shape to
 #' @param shapeId the id of the shape object

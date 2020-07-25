@@ -2,7 +2,7 @@
 % Please edit documentation in R/fabric_image_add.R
 \name{fabric_image_add}
 \alias{fabric_image_add}
-\title{Add an image to an existing canvas element}
+\title{Add an image to a preexisting canvas element}
 \usage{
 fabric_image_add(
   cid,
@@ -48,7 +48,7 @@ fabric_image_add(
 an image inside a preexisting canvas element
 }
 \description{
-Add an image to an existing canvas element
+Add an image to a preexisting canvas element
 }
 \examples{
 if (interactive()) {

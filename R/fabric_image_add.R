@@ -1,4 +1,4 @@
-#' Add an image to an existing canvas element
+#' Add an image to a preexisting canvas element
 #'
 #' @param cid the id of the canvas element you want to add your image to
 #' @param imgId the of the image
