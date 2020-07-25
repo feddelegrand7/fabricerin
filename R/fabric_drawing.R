@@ -44,10 +44,16 @@ fabric_drawing <- function(cid,
 
 htmltools::tagList(
 
+
+  htmltools::tags$input(id="erase", type="checkbox", " Erase"),
+
   htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
+var dcol = '{drawingColor}';
+var ccol = '{cfill}';
+
 
 var {cid} = new fabric.Canvas('{cid}', {{
 
@@ -57,9 +63,45 @@ var {cid} = new fabric.Canvas('{cid}', {{
 
 {cid}.backgroundColor = '{cfill}';
 
-{cid}.freeDrawingBrush.width = {drawingWidth};
 
-{cid}.freeDrawingBrush.color = '{drawingColor}';
+$(document).ready(function() {{
+
+ $('#erase').click(function(){{
+
+    if (this.checked) {{
+
+      {cid}.freeDrawingBrush.width   = 10;
+
+    }} else {{
+
+      {cid}.freeDrawingBrush.width  = {drawingWidth};
+
+    }}
+}})
+
+
+} );
+
+
+
+$(document).ready(function() {{
+
+ $('#erase').click(function(){{
+
+    if (this.checked) {{
+
+      {cid}.freeDrawingBrush.color  = ccol;
+
+    }} else {{
+
+      {cid}.freeDrawingBrush.color = dcol;
+
+    }}
+}})
+
+
+} );
+
 
 
   "
