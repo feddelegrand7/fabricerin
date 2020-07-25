@@ -1,12 +1,9 @@
 Package: fabricerin
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+Title: Create Easily Canvas in 'shiny' and 'RMarkdown' Documents.
+Version: 0.1.0
+Authors@R: c(
+    person("Mohamed El Fodil", "Ihaddaden", email = "ihaddaden.fodeil@gmail.com", role = c("aut", "cre")),
+    person("fabricjs contributors",  role = c("ctb", "cph"), comment = "fabricjs JavaScript library")) 
 Description: What the package does (one paragraph).
 License: MIT + file LICENSE
 Encoding: UTF-8
