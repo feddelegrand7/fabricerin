@@ -1,4 +1,5 @@
 
+
 #' Create shapes inside a canvas
 #'
 #' @param cid the id of the canvas element
@@ -7,8 +8,8 @@
 #' @param cfill the color of the canvas element
 #' @param shapeId the id of the shape object
 #' @param shape the shape of the object. Choices include 'Circle', 'Triangle' and 'Rect'. Defaults to 'Rect'
-#' @param left The shape's position from the left relative to the canvas element. Defaults to 100
-#' @param top The shape's position from the top relative to the canvas element. Defaults to 100
+#' @param left the shape's position from the left relative to the canvas element. Defaults to 100
+#' @param top the shape's position from the top relative to the canvas element. Defaults to 100
 #' @param fill the color of the shape. Defaults to 'red'
 #' @param width the width of the shape. Defaults to 200
 #' @param height the height of the shape. Defaults to 200
@@ -20,7 +21,7 @@
 #' @param isDrawingMode logical. If TRUE, the user can draw inside the canvas element.
 #' @param radius Mandatory if the chosen shape is a 'Circle'. Defaults to NULL
 #'
-#' @return a shape inside a canvas
+#' @return a shape object inside a canvas
 #' @export
 #'
 #' @examples
@@ -71,11 +72,10 @@ fabric_shape <- function(cid,
                          isDrawingMode = FALSE,
                          radius = NULL) {
 
-
-  if (!theme %in% c("Rect",
+  if (!shape %in% c("Rect",
                     "Circle",
-                    "Triangle", )) {
-    stop(paste0(theme, " theme is not available, did you misspelled it ?"))
+                    "Triangle")) {
+    stop(paste0(shape, " shape is not available, choices are Rect, Circle and Triangle"))
   }
 
 
