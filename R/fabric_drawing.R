@@ -63,26 +63,10 @@ var {cid} = new fabric.Canvas('{cid}', {{
 
 {cid}.backgroundColor = '{cfill}';
 
-
-$(document).ready(function() {{
-
- $('#erase').click(function(){{
-
-    if (this.checked) {{
-
-      {cid}.freeDrawingBrush.width   = 10;
-
-    }} else {{
-
-      {cid}.freeDrawingBrush.width  = {drawingWidth};
-
-    }}
-}})
+{cid}.freeDrawingBrush.width  = {drawingWidth};
 
 
-} );
-
-
+{cid}.freeDrawingBrush.color  = '{drawingColor}';
 
 $(document).ready(function() {{
 
@@ -100,7 +84,30 @@ $(document).ready(function() {{
 }})
 
 
-} );
+}});
+
+
+
+$(document).ready(function() {{
+
+ $('#erase').click(function(){{
+
+    if (this.checked) {{
+
+      {cid}.freeDrawingBrush.width   = 10;
+
+    }} else {{
+
+      {cid}.freeDrawingBrush.width  = {drawingWidth};
+
+    }}
+}})
+
+
+}} );
+
+
+
 
 
 

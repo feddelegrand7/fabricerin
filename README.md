@@ -57,16 +57,9 @@ ui <- fluidPage(
                  cheight = 400, 
                  drawingWidth = 5, 
                  drawingColor = "red")
-  
-  
-  
 )
 
-
-
 server <- function(input, output){}
-
-
 
 shinyApp(ui, server)
 ```
