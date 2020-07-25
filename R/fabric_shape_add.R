@@ -29,15 +29,39 @@
 #'
 #' use_fabric(),
 #'
-#' fabric_shape(cid = "canvas", shapeId = "shape1", shape = "Rect", left = 130, top = 200),
+#' fabric_shape(cid = "canvas",
+#'              shapeId = "shape1",
+#'              shape = "Rect",
+#'              left = 130,
+#'              top = 200),
 #'
-#' fabric_shape_add(cid = "canvas", shapeId = "shapo", shape = "Circle", radius = 30, left = 100, top = 100),
+#' fabric_shape_add(cid = "canvas",
+#'                  shapeId = "shapo",
+#'                  shape = "Circle",
+#'                  radius = 30,
+#'                  left = 100,
+#'                  top = 100),
 #'
-#' fabric_shape_add(cid = "canvas", shapeId = "shapa", shape = "Circle", radius = 30, left = 200, top = 100),
+#' fabric_shape_add(cid = "canvas",
+#'                  shapeId = "shapa",
+#'                  shape = "Circle",
+#'                  radius = 30,
+#'                  left = 200,
+#'                  top = 100),
 #'
-#' fabric_shape_add(cid = "canvas", shapeId = "shapox", shape = "Circle", radius = 30, left = 300, top = 100),
+#' fabric_shape_add(cid = "canvas",
+#'                  shapeId = "shapox",
+#'                  shape = "Circle",
+#'                  radius = 30,
+#'                  left = 300,
+#'                  top = 100),
 #'
-#' fabric_shape_add(cid = "canvas", shapeId = "shapor", shape = "Circle", radius = 30, left = 300, top = 100)
+#' fabric_shape_add(cid = "canvas",
+#'                  shapeId = "shapor",
+#'                  shape = "Circle",
+#'                  radius = 30,
+#'                  left = 300,
+#'                  top = 100)
 #'
 #' )
 #'

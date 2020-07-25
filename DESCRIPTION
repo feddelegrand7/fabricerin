@@ -6,7 +6,7 @@ Authors@R: c(
     person("fabricjs contributors",  role = c("ctb", "cph"), comment = "fabricjs JavaScript library")) 
 Description: Allows the user to implement easily canvas elements within a 'shiny' app or an 'RMarkdown' document. 
     The user can create shapes, images and text elements within the canvas which can also be used as a drawing tool for taking notes.
-    The package relies on the 'fabricjs' 'JavaScript' library. See <http://fabricjs.com/>
+    The package relies on the 'fabricjs' 'JavaScript' library. See <http://fabricjs.com/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

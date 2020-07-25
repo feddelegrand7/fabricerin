@@ -16,13 +16,15 @@
 #'
 #' use_fabric(),
 #'
+#' img <- "https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-stock-photo-leaf.jpg"
+#'
 #' fabric_shape(cid = "canvas123",
 #'              shapeId = "tri1",
 #'              shape = "Triangle",
 #'              fill = "darkblue"),
 #'
 #'fabric_curtail(cid = "canvas123",
-#'              imgsrc = ""https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-stock-photo-leaf.jpg"",
+#'              imgsrc = img,
 #'              type = "background"
 #'
 #'              )

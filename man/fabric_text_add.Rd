@@ -27,8 +27,7 @@ fabric_text_add(
   shadowCol = "#324C63",
   textAlign = "center",
   lineHeight = 1,
-  textBackgroundColor = NULL,
-  isDrawingMode = FALSE
+  textBackgroundColor = NULL
 )
 }
 \arguments{

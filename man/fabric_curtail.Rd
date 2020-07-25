@@ -27,13 +27,15 @@ ui <- fluidPage(
 
 use_fabric(),
 
+img <- "https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-stock-photo-leaf.jpg"
+
 fabric_shape(cid = "canvas123",
              shapeId = "tri1",
              shape = "Triangle",
              fill = "darkblue"),
 
 fabric_curtail(cid = "canvas123",
-             imgsrc = "https://nitrocdn.com/BzukxzxIDWSkBjOuXIuFVkjjEriFmqlw/assets/static/optimized/rev-0607053/wp-content/uploads/2020/02/Leaves-768x510.jpg",
+             imgsrc = img,
              type = "background"
 
              )

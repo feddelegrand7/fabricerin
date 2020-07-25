@@ -57,22 +57,26 @@ ui <- fluidPage(
 
 use_fabric(),
 
+img1 <- "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png"
+
+img2 <- "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png"
+
 fabric_image(cid = "cimage",
              imgId = "Rimg",
-             imgsrc = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png",
+             imgsrc = img1,
              imgheight = 200,
              imgwidth = 200),
 fabric_image_add(cid = "cimage",
                  imgId = "rstudioimg",
-                 imgsrc = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png",
+                 imgsrc = img2,
                  imgwidth = 200,
                  imgheight = 200,
                  left = 400)
                  )
 
-                 server <- function(input, output) {}
+server <- function(input, output) {}
 
-                 shinyApp(ui = ui, server = server)
+shinyApp(ui = ui, server = server)
 
 }
 }

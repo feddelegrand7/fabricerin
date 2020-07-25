@@ -82,8 +82,8 @@ fabric_text_add <- function(cid,
                         shadowCol = "#324C63",
                         textAlign = "center",
                         lineHeight = 1,
-                        textBackgroundColor = NULL,
-                        isDrawingMode = FALSE){
+                        textBackgroundColor = NULL
+                        ){
 
 
 
@@ -94,7 +94,6 @@ fabric_text_add <- function(cid,
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
-  isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
 
   underline <- ifelse(underline == TRUE, "true", "false")
 
