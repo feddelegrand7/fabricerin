@@ -13,7 +13,7 @@ fabric_image <- function(
                           angle = 0,
                           opacity = 1,
                           strokecolor = "darkblue",
-                          strokewidth = 5,
+                          strokewidth = 1,
                           selectable = TRUE,
                           isDrawingMode = FALSE
 
@@ -39,9 +39,9 @@ fabric_image <- function(
 
   {cid}.backgroundColor = '{cfill}';
 
- fabric.Image.fromURL('{imgsrc}', function(myImg) {{
+ fabric.Image.fromURL('{imgsrc}', function({imgId}) {{
 
- var {imgId} = myImg.set({{
+ var {imgId} = {imgId}.set({{
  left: {left},
  top: {top},
  angle: {angle},
