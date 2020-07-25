@@ -26,6 +26,8 @@
 #'
 #' if (interactive()) {
 #'
+#' img <- "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png"
+#'
 #' ui <- fluidPage(
 #'
 #' use_fabric(),
@@ -33,7 +35,7 @@
 #' fabric_image(cid = "cimage",
 #'              cfill = "lightblue",
 #'              imgId = "Rimg",
-#'              imgsrc = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png")
+#'              imgsrc = img)
 #'
 #'              )
 #'
@@ -42,7 +44,7 @@
 #'
 #'shinyApp(ui = ui, server = server)
 #'
-#'
+#'}
 #'
 
 fabric_image <- function(

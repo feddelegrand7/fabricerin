@@ -107,7 +107,7 @@ use_fabric(),
 
 fabric_text(cid = "can",
          textId = "text",
-         text = " 'But A Hero Is A Guy Who Gives Out The Meat To Everyone Else.' \\\\n Monkey D. Luffy",
+         text = "But A Hero Is A Guy Who Gives Out The Meat To Everyone Else.",
          cfill = "#DD5347",
          left = 120,
          shadowCol = "blue",

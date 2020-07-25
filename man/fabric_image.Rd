@@ -62,3 +62,29 @@ an image inside a canvas element
 \description{
 Insert external images inside canvas element
 }
+\examples{
+
+
+if (interactive()) {
+
+img <- "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png"
+
+ui <- fluidPage(
+
+use_fabric(),
+
+fabric_image(cid = "cimage",
+             cfill = "lightblue",
+             imgId = "Rimg",
+             imgsrc = img)
+
+             )
+
+server <- function(input, output) {}
+
+
+shinyApp(ui = ui, server = server)
+
+}
+
+}
