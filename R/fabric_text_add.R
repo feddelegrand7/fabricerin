@@ -1,4 +1,4 @@
-fabric_text <- function(cid,
+fabric_text_add <- function(cid,
                         textId,
                         text,
                         left = 100,
@@ -27,6 +27,8 @@ fabric_text <- function(cid,
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
+  isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
+
   underline <- ifelse(underline == TRUE, "true", "false")
 
   linethrough <- ifelse(linethrough == TRUE, "true", "false")
@@ -38,10 +40,21 @@ fabric_text <- function(cid,
   tBG <- ifelse(is.null(textBackgroundColor), character(0), glue::glue("textBackgroundColor: '{textBackgroundColor}',"))
 
 
+
     htmltools::tags$script(htmltools::HTML(glue::glue(
+
+
       "
 
-  var {textId} = new fabric.Text('{text}', {{
+  var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
+
+  {cid}.backgroundColor = '{cfill}';
+
+  var {textId} = new fabric.Text(\"{text}\", {{
 
   left: {left},
   top: {top},
@@ -50,8 +63,8 @@ fabric_text <- function(cid,
   fontStyle: '{fontStyle}',
   fontWeight: '{fontWeight}',
   underline: {underline},
-  linethrough: {underline},
-  overline: {underline},
+  linethrough: {linethrough},
+  overline: {overline},
   fill: '{fill}',
   angle: {angle},
   opacity: {opacity},
@@ -73,7 +86,6 @@ fabric_text <- function(cid,
 
 
   )
-
 
 
 

@@ -1,4 +1,40 @@
 
+#' Title
+#'
+#' @param cid
+#' @param cwidth
+#' @param cheight
+#' @param cfill
+#' @param textId
+#' @param text
+#' @param left
+#' @param top
+#' @param fill
+#' @param angle
+#' @param opacity
+#' @param fontFamily
+#' @param fontSize
+#' @param fontStyle
+#' @param strokecolor
+#' @param strokewidth
+#' @param fontWeight
+#' @param underline
+#' @param linethrough
+#' @param overline
+#' @param selectable
+#' @param shadow
+#' @param shadowCol
+#' @param textAlign
+#' @param lineHeight
+#' @param textBackgroundColor
+#' @param isDrawingMode
+#'
+#' @return
+#' @export
+#'
+#' @examples
+
+
 fabric_text <- function(cid,
                         cwidth = 800,
                         cheight = 600,
@@ -30,6 +66,8 @@ fabric_text <- function(cid,
 
 
 
+
+
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
   isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
@@ -46,11 +84,14 @@ fabric_text <- function(cid,
 
 
 
+
   htmltools::tagList(
 
     htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
     htmltools::tags$script(htmltools::HTML(glue::glue(
+
+
       "
 
   var {cid} = new fabric.Canvas('{cid}', {{
@@ -61,7 +102,7 @@ fabric_text <- function(cid,
 
   {cid}.backgroundColor = '{cfill}';
 
-  var {textId} = new fabric.Text('{text}', {{
+  var {textId} = new fabric.Text(\"{text}\", {{
 
   left: {left},
   top: {top},
@@ -70,8 +111,8 @@ fabric_text <- function(cid,
   fontStyle: '{fontStyle}',
   fontWeight: '{fontWeight}',
   underline: {underline},
-  linethrough: {underline},
-  overline: {underline},
+  linethrough: {linethrough},
+  overline: {overline},
   fill: '{fill}',
   angle: {angle},
   opacity: {opacity},
@@ -93,20 +134,6 @@ fabric_text <- function(cid,
 
 
   )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
