@@ -1,38 +1,62 @@
 
-#' Title
+#' Insert text within canvas element
 #'
-#' @param cid
-#' @param cwidth
-#' @param cheight
-#' @param cfill
-#' @param textId
-#' @param text
-#' @param left
-#' @param top
-#' @param fill
-#' @param angle
-#' @param opacity
-#' @param fontFamily
-#' @param fontSize
-#' @param fontStyle
-#' @param strokecolor
-#' @param strokewidth
-#' @param fontWeight
-#' @param underline
-#' @param linethrough
-#' @param overline
-#' @param selectable
-#' @param shadow
-#' @param shadowCol
-#' @param textAlign
-#' @param lineHeight
-#' @param textBackgroundColor
-#' @param isDrawingMode
+#' @param cid the id of the canvas element
+#' @param cwidth the width of the canvas element. Defaults to 800
+#' @param cheight the height of the canvas element. Defaults to 600
+#' @param cfill the color of the canvas element
+#' @param textId the id of the text
+#' @param text the content of the text
+#' @param left the text's position from the left relative to the canvas element. Defaults to 100
+#' @param top the text's position from the top relative to the canvas element. Defaults to 100
+#' @param fill the text's color. Defaults to '#2F3941' (dark shade of cyan-blue)
+#' @param angle the angle of rotation of the text. Defaults to 0 (no rotation)
+#' @param opacity text opacity (from 0 to 1). Defaults to 1
+#' @param fontFamily the font family of the text. Defaults to 'Comic Sans'
+#' @param fontSize text sizing. Defaults to 40
+#' @param fontStyle the font style of the text. Either 'normal' or 'italic'
+#' @param strokecolor the stroke color of the text Defaults to '#282A36' (Very dark grayish blue)
+#' @param strokewidth the stroke width of the text. Defaults to 1
+#' @param fontWeight allows the user to make text thicker or thinner. Keywords can be used ('normal', 'bold'), or numbers. Defaults to 'normal'
+#' @param underline logical. Whether to underline the text or not. Defaults to FALSE
+#' @param linethrough logical. Whether to insert a line through the text or not. Defaults to FALSE
+#' @param overline logical. Whether to put a line above the text or not. Defaults to FALSE
+#' @param selectable logical. If TRUE, the user can modify interactively the image's size, position and rotation. Defaults to TRUE
+#' @param shadow logical. If TRUE a text shadow will be inserted behind the raw text. Defaults to FALSE
+#' @param shadowCol the color of the text shadow. Defaults to #FFFAF0 (floral white)
+#' @param textAlign the alignment of text. Useful when there are line breaks. Defaults to "center"
+#' @param lineHeight the height of the line breaks.Defaults to 1
+#' @param textBackgroundColor the background color of the text, defaults to NULL
+#' @param isDrawingMode logical. If TRUE, the user can draw inside the canvas element.
 #'
-#' @return
+#' @return a text object within a canvas element
 #' @export
 #'
 #' @examples
+#'
+#'
+#' if (interactive()) {
+#'
+#'
+#'ui <- fluidPage(
+#'
+#'use_fabric(),
+#'
+#'fabric_text(cid = "can",
+#'          textId = "text",
+#'          text = " 'But A Hero Is A Guy Who Gives Out The Meat To Everyone Else. \\n I Want To Eat The Damn Meat!' \\n Monkey D. Luffy",
+#'          cfill = "#DD5347",
+#'          left = 120,
+#'          shadowCol = "blue",
+#'          fontSize = 20,
+#'          fontWeight = "bold",
+#'          lineHeight = 3
+#'          )
+#'server <- function(input, output) {}
+#'
+#'shinyApp(ui = ui, server = server)
+#'
+#'}
 
 
 fabric_text <- function(cid,
@@ -57,7 +81,7 @@ fabric_text <- function(cid,
                         overline = FALSE,
                         selectable = TRUE,
                         shadow = FALSE,
-                        shadowCol = "#324C63",
+                        shadowCol = "#FFFAF0",
                         textAlign = "center",
                         lineHeight = 1,
                         textBackgroundColor = NULL,
@@ -66,7 +90,10 @@ fabric_text <- function(cid,
 
 
 
-
+  if (!fontStyle %in% c("normal",
+                    "italic")) {
+    stop(paste0("fontStyle accepts two values: 'normal' or 'italic'"))
+  }
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 

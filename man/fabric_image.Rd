@@ -2,7 +2,7 @@
 % Please edit documentation in R/fabric_image.R
 \name{fabric_image}
 \alias{fabric_image}
-\title{Insert external images inside canvas}
+\title{Insert external images inside canvas element}
 \usage{
 fabric_image(
   cid,
@@ -60,5 +60,5 @@ fabric_image(
 an image inside a canvas element
 }
 \description{
-Insert external images inside canvas
+Insert external images inside canvas element
 }

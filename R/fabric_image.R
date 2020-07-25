@@ -1,5 +1,5 @@
 
-#' Insert external images inside canvas
+#' Insert external images inside canvas element
 #'
 #' @param cid the id of the canvas element
 #' @param cwidth the width of the canvas element. Defaults to 800
