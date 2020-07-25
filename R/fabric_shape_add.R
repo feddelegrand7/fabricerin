@@ -3,7 +3,7 @@
 
 #' Add a shape object to existing canvas element
 #'
-#' @param cid the id of the canvas element
+#' @param cid the id of the canvas element you want to add your shape to
 #' @param shapeId the id of the shape object
 #' @param shape the shape of the object. Choices include 'Circle', 'Triangle' and 'Rect'. Defaults to 'Rect'
 #' @param left the shape's position from the left relative to the canvas element. Defaults to 100
@@ -18,7 +18,7 @@
 #' @param selectable logical. If TRUE, the user can modify interactively the shape. Defaults to TRUE
 #' @param radius Mandatory if the chosen shape is a 'Circle'. Defaults to NULL
 #'
-#' @return a shape object inside a canvas
+#' @return a shape object inside a preexisting canvas element
 #' @export
 #'
 #' @examples

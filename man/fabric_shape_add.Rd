@@ -22,7 +22,7 @@ fabric_shape_add(
 )
 }
 \arguments{
-\item{cid}{the id of the canvas element}
+\item{cid}{the id of the canvas element you want to add your shape to}
 
 \item{shapeId}{the id of the shape object}
 
@@ -51,7 +51,7 @@ fabric_shape_add(
 \item{radius}{Mandatory if the chosen shape is a 'Circle'. Defaults to NULL}
 }
 \value{
-a shape object inside a canvas
+a shape object inside a preexisting canvas element
 }
 \description{
 Add a shape object to existing canvas element
