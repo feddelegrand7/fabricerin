@@ -116,7 +116,7 @@ shinyApp(ui, server)
 
 ![](man/figures/example3.gif)
 
-You can add as may shape as you want to an existing canvas using the
+You can add as many shape as you want to an existing canvas using the
 `fabric_shape_add()` function. **Don’t forget to reference the
 preexisting canvas with its ID:**
 
