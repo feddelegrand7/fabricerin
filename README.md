@@ -196,6 +196,9 @@ Similar to shapes, you can add images to preexisting canvas using the
 `fabric_image_add()` function:
 
 ``` r
+library(shiny)
+library(fabricerin)
+
 ui <- fluidPage(
 
  use_fabric(),
@@ -217,6 +220,8 @@ server <- function(input, output) {}
 
 shinyApp(ui = ui, server = server)
 ```
+
+![](man/figures/r_dplyr_logo.png)
 
 ## fabric\_text(): Render text elements in canvas
 
