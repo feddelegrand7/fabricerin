@@ -38,14 +38,15 @@ fabric_drawing <- function(cid,
                           cheight = 600,
                           cfill = "#FFFFFF",
                           drawingWidth = 2,
-                          drawingColor = "#1E1E1E"){
+                          drawingColor = "#1E1E1E",
+                          gumSize = 10){
 
 
 
 htmltools::tagList(
 
 
-  htmltools::tags$input(id="erase", type="checkbox", " Erase"),
+  htmltools::tags$input(id="erase", type="checkbox", " Gum"),
 
   htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
@@ -96,7 +97,7 @@ $(document).ready(function() {{
 
     if (this.checked) {{
 
-      {cid}.freeDrawingBrush.width   = 10;
+      {cid}.freeDrawingBrush.width   = {gumSize};
 
     }} else {{
 

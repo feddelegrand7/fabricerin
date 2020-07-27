@@ -55,10 +55,8 @@ ui <- fluidPage(
   h1("You can take some notes below"), 
   
   fabric_drawing(cid = "canvas1", 
-                 cwidth = 400, 
-                 cheight = 400, 
-                 drawingWidth = 5, 
-                 drawingColor = "lightblue")
+                drawingColor = "darkblue", 
+                gumSize = 50)
 )
 
 server <- function(input, output){}
@@ -66,11 +64,7 @@ server <- function(input, output){}
 shinyApp(ui, server)
 ```
 
-![](man/figures/example1.gif)
-
-Works the same way in RMarkdown:
-
-![](man/figures/example2.gif)
+![](man/figures/gumexample.gif)
 
 ## fabric\_shape(): Render shape objects in canvas
 
