@@ -7,6 +7,7 @@
 #' @param cfill the color of the canvas element. Default to #FFFFFF (white)
 #' @param drawingWidth the width of the drawing output. Default to 2
 #' @param drawingColor the color of the drawing output. Default to #1E1E1E (black)
+#' @param gumSize specify the size of the gum. Defaults to 10
 #'
 #' @return an HTML canvas element
 #' @export
