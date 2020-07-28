@@ -20,8 +20,8 @@
 #' @param selectable logical. If TRUE, the user can modify interactively the shape's size, position and rotation. Defaults to TRUE
 #' @param isDrawingMode logical. If TRUE, the user can draw inside the canvas element.
 #' @param radius mandatory if the chosen shape is a 'Circle'. Defaults to NULL
-#' @param polx the coordinate points of the polygon, from the left.
-#' @param poly the coordinate points of the polygon, from the top
+#' @param polx a vector of the coordinate points of the polygon, from the left.
+#' @param poly a vector of the coordinate points of the polygon, from the top
 #'
 #' @return a shape object inside a canvas
 #' @export
@@ -105,7 +105,7 @@ fabric_shape <- function(cid,
 
   ){
 
-    stop("polx and poly have a different length")
+    stop("polx and poly must have the same length")
 
   }
 
