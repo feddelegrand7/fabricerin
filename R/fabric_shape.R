@@ -99,6 +99,15 @@ fabric_shape <- function(cid,
     stop("If you draw a Circle, you need to provide a radius")
   }
 
+  if (shape == "Polygon" &
+
+      length(polx) != length(poly)
+
+  ){
+
+    stop("polx and poly have a different length")
+
+  }
 
   if (shape == "Circle" &
       is.null(radius)) {
