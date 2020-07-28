@@ -70,14 +70,32 @@ fabric_shape <- function(cid,
                          strokewidth = 5,
                          selectable = TRUE,
                          isDrawingMode = FALSE,
-                         radius = NULL) {
+                         radius = NULL,
+                         polx = NULL,
+                         poly = NULL) {
 
   if (!shape %in% c("Rect",
                     "Circle",
-                    "Triangle")) {
-    stop(paste0(shape, " shape is not available, choices are Rect, Circle and Triangle"))
+                    "Triangle",
+                    "Polygon")) {
+    stop(paste0(shape, " shape is not available, choices are Rect, Circle, Triangle and Polygon"))
   }
 
+
+  if (shape == "Polygon" &
+      is.null(poly) & is.null(polx)) {
+    stop("If you draw a Circle, you need to provide a radius")
+  }
+
+  if (shape == "Polygon" &
+      is.null(polx)) {
+    stop("If you draw a Circle, you need to provide a radius")
+  }
+
+  if (shape == "Polygon" &
+      is.null(poly)) {
+    stop("If you draw a Circle, you need to provide a radius")
+  }
 
 
   if (shape == "Circle" &
@@ -94,16 +112,67 @@ fabric_shape <- function(cid,
   isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
 
 
-  htmltools::tagList(
-    htmltools::tags$canvas(
-      id = cid,
-      width = cwidth,
-      height = cheight
-    ),
+  if(shape == "Polygon"){
 
-    htmltools::tags$script(htmltools::HTML(
-      glue::glue(
-        "
+
+  data <- paste("{x:", polx, ", y:", poly, "}", collapse = ",")
+
+
+    htmltools::tagList(
+      htmltools::tags$canvas(
+        id = cid,
+        width = cwidth,
+        height = cheight
+      ),
+
+      htmltools::tags$script(htmltools::HTML(
+        glue::glue(
+          "
+var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
+
+{cid}.backgroundColor = '{cfill}';
+
+
+var {shapeId} = new fabric.{shape}(
+
+[{data}], {{
+
+fill: '{fill}'
+
+
+}});
+
+{cid}.add({shapeId});
+
+
+  "
+        )
+      ))
+
+
+
+    )
+
+
+
+
+  } else {
+
+
+    htmltools::tagList(
+      htmltools::tags$canvas(
+        id = cid,
+        width = cwidth,
+        height = cheight
+      ),
+
+htmltools::tags$script(htmltools::HTML(
+        glue::glue(
+          "
 
 var {cid} = new fabric.Canvas('{cid}', {{
 
@@ -135,12 +204,21 @@ selectable: {selectable},
 
 
   "
-      )
-    ))
+        )
+      ))
 
 
 
-  )
+    )
+
+
+
+
+
+  }
+
+
+
 
 
 
