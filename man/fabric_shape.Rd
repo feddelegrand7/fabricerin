@@ -22,7 +22,9 @@ fabric_shape(
   strokewidth = 5,
   selectable = TRUE,
   isDrawingMode = FALSE,
-  radius = NULL
+  radius = NULL,
+  polx = NULL,
+  poly = NULL
 )
 }
 \arguments{
@@ -60,7 +62,11 @@ fabric_shape(
 
 \item{isDrawingMode}{logical. If TRUE, the user can draw inside the canvas element.}
 
-\item{radius}{Mandatory if the chosen shape is a 'Circle'. Defaults to NULL}
+\item{radius}{mandatory if the chosen shape is a 'Circle'. Defaults to NULL}
+
+\item{polx}{the coordinate points of the polygon, from the left.}
+
+\item{poly}{the coordinate points of the polygon, from the top}
 }
 \value{
 a shape object inside a canvas
