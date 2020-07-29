@@ -55,17 +55,16 @@ htmltools::tagList(
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
-var dcol = '{drawingColor}';
-var ccol = '{cfill}';
+const dcol = '{drawingColor}';
+const ccol = '{cfill}';
 
 
-var {cid} = new fabric.Canvas('{cid}', {{
-
+const {cid} = new fabric.Canvas('{cid}', {{
+    backgroundColor: '{cfill}',
     isDrawingMode: true
 
     }});
 
-{cid}.backgroundColor = '{cfill}';
 
 {cid}.freeDrawingBrush.width  = {drawingWidth};
 
