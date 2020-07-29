@@ -49,7 +49,7 @@ htmltools::tagList(
 
   htmltools::tags$input(id="erase", type="checkbox", " Gum"),
 
-  htmltools::tags$input(id="export", type="button", value = "Export"),
+  htmltools::tags$input(id=glue::glue("export{cid}"), type="button", value = "Export"),
 
   htmltools::tags$br(),  htmltools::tags$br(),
 
@@ -112,7 +112,7 @@ const {cid} = new fabric.Canvas('{cid}', {{
 }});
 
 
-$('#export').click(function(){{
+$('#export{cid}').click(function(){{
 
   $('#{cid}').get(0).toBlob(function(blob){{
 
