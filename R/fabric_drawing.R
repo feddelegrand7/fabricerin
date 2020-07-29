@@ -47,7 +47,7 @@ fabric_drawing <- function(cid,
 htmltools::tagList(
 
 
-  htmltools::tags$input(id="erase", type="checkbox", " Gum"),
+  htmltools::tags$input(id=glue::glue("erase{cid}"), type="checkbox", " Gum"),
 
   htmltools::tags$input(id=glue::glue("export{cid}"), type="button", value = "Export"),
 
@@ -76,7 +76,7 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
 
 
- $('#erase').click(function(){{
+ $('#erase{cid}').click(function(){{
 
     if (this.checked) {{
 
@@ -96,7 +96,7 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
 
 
- $('#erase').click(function(){{
+ $('#erase{cid}').click(function(){{
 
     if (this.checked) {{
 
