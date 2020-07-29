@@ -49,9 +49,15 @@ htmltools::tagList(
 
   htmltools::tags$input(id="erase", type="checkbox", " Gum"),
 
+  htmltools::tags$input(id="export", type="button", value = "Export"),
+
+  htmltools::tags$br(),  htmltools::tags$br(),
+
   htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
   htmltools::tags$script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"),
+
+  htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"),
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
@@ -71,7 +77,7 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
 {cid}.freeDrawingBrush.color  = '{drawingColor}';
 
-$(document).ready(function() {{
+
 
  $('#erase').click(function(){{
 
@@ -84,14 +90,14 @@ $(document).ready(function() {{
       {cid}.freeDrawingBrush.color = dcol;
 
     }}
-}})
+
 
 
 }});
 
 
 
-$(document).ready(function() {{
+
 
  $('#erase').click(function(){{
 
@@ -104,13 +110,22 @@ $(document).ready(function() {{
       {cid}.freeDrawingBrush.width  = {drawingWidth};
 
     }}
-}})
 
 
-}} );
+}});
 
 
+$('#export').click(function(){{
 
+  $('#{cid}').get(0).toBlob(function(blob){{
+
+    saveAs(blob, '{cid}-IMG.png');
+
+
+  }});
+
+
+}});
 
 
 
