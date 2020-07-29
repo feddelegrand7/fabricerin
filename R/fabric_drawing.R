@@ -61,9 +61,6 @@ htmltools::tagList(
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
-const dcol = '{drawingColor}';
-const ccol = '{cfill}';
-
 
 const {cid} = new fabric.Canvas('{cid}', {{
     backgroundColor: '{cfill}',
@@ -83,11 +80,11 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
     if (this.checked) {{
 
-      {cid}.freeDrawingBrush.color  = ccol;
+      {cid}.freeDrawingBrush.color  = '{cfill}';
 
     }} else {{
 
-      {cid}.freeDrawingBrush.color = dcol;
+      {cid}.freeDrawingBrush.color = '{drawingColor}';
 
     }}
 
