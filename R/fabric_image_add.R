@@ -87,7 +87,10 @@ fabric_image_add <- function(cid,
 
  {cid}.add({imgId});
 
-  });
+ {cid}.renderAll();
+
+
+  }}, {{ crossOrigin: 'anonymous'}});
 
 
       "
