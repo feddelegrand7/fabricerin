@@ -1,6 +1,6 @@
 Package: fabricerin
 Title: Create Easily Canvas in 'shiny' and 'RMarkdown' Documents
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person("Mohamed El Fodil", "Ihaddaden", email = "ihaddaden.fodeil@gmail.com", role = c("aut", "cre")),
     person("fabricjs contributors",  role = c("ctb", "cph"), comment = "fabricjs JavaScript library")) 
