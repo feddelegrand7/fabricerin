@@ -39,7 +39,6 @@ fabric_drawing <- function(cid,
                           cheight = 600,
                           cfill = "#FFFFFF",
                           drawingWidth = 2,
-                          drawingColor = "#1E1E1E",
                           gumSize = 10){
 
 
@@ -50,6 +49,8 @@ htmltools::tagList(
   htmltools::tags$input(id=glue::glue("erase{cid}"), type="checkbox", " Gum"),
 
   htmltools::tags$input(id=glue::glue("export{cid}"), type="button", value = "Export"),
+
+  htmltools::tags$input(id = "drawing-color", type = "color", value = "#005E7A"),
 
   htmltools::tags$br(),  htmltools::tags$br(),
 
@@ -72,7 +73,15 @@ const {cid} = new fabric.Canvas('{cid}', {{
 {cid}.freeDrawingBrush.width  = {drawingWidth};
 
 
-{cid}.freeDrawingBrush.color  = '{drawingColor}';
+drawingColorEl = document.getElementById('drawing-color');
+
+{cid}.freeDrawingBrush.color = drawingColorEl.value;
+
+drawingColorEl.onchange = function() {{
+    {cid}.freeDrawingBrush.color = drawingColorEl.value;
+  }};
+
+
 
 
 
@@ -84,7 +93,7 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
     }} else {{
 
-      {cid}.freeDrawingBrush.color = '{drawingColor}';
+      {cid}.freeDrawingBrush.color = drawingColorEl.value;
 
     }}
 
@@ -123,6 +132,10 @@ $('#export{cid}').click(function(){{
 
 
 }});
+
+
+
+
 
 
 
