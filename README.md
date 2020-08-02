@@ -14,7 +14,9 @@ easily canvas elements within your Shiny app and RMarkdown documents.
 You can use the canvas to render shapes, images and text. You can also
 create a canvas for drawing/taking notes purposes. Under the hoods,
 `fabricerin` relies on the the [fabricjs](http://fabricjs.com/)
-JavaScript library.
+JavaScript library. 
+
+Fore more information, you can have a look at the following [Tutorial](https://ihaddadenfodil.com/post/fabricering-a-tutorial/)
 
 ## Installation
 
