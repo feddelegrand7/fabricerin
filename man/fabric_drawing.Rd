@@ -10,7 +10,6 @@ fabric_drawing(
   cheight = 600,
   cfill = "#FFFFFF",
   drawingWidth = 2,
-  drawingColor = "#1E1E1E",
   gumSize = 10
 )
 }
@@ -24,8 +23,6 @@ fabric_drawing(
 \item{cfill}{the color of the canvas element. Default to #FFFFFF (white)}
 
 \item{drawingWidth}{the width of the drawing output. Default to 2}
-
-\item{drawingColor}{the color of the drawing output. Default to #1E1E1E (black)}
 
 \item{gumSize}{specify the size of the gum. Defaults to 10}
 }
