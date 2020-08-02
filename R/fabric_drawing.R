@@ -92,7 +92,7 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
     }} else {{
 
-      {cid}.freeDrawingBrush.color = drawingColorEl.value;
+      {cid}.freeDrawingBrush.color = {cid}drawingColorEl.value;
 
     }}
 
