@@ -49,7 +49,7 @@ htmltools::tagList(
 
   htmltools::tags$input(id=glue::glue("export{cid}"), type="button", value = "Export"),
 
-  htmltools::tags$input(id = "drawing-color", type = "color", value = "#005E7A"),
+  htmltools::tags$input(id = glue::glue("{cid}drawing-color"), type = "color", value = "#005E7A"),
 
   htmltools::tags$br(),  htmltools::tags$br(),
 
@@ -72,12 +72,12 @@ const {cid} = new fabric.Canvas('{cid}', {{
 {cid}.freeDrawingBrush.width  = {drawingWidth};
 
 
-drawingColorEl = document.getElementById('drawing-color');
+{cid}drawingColorEl = document.getElementById('{cid}drawing-color');
 
-{cid}.freeDrawingBrush.color = drawingColorEl.value;
+{cid}.freeDrawingBrush.color = {cid}drawingColorEl.value;
 
-drawingColorEl.onchange = function() {{
-    {cid}.freeDrawingBrush.color = drawingColorEl.value;
+{cid}drawingColorEl.onchange = function() {{
+    {cid}.freeDrawingBrush.color = {cid}drawingColorEl.value;
   }};
 
 
