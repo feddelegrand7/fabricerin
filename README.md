@@ -54,11 +54,8 @@ ui <- fluidPage(
   
   use_fabric(), # do not forget to include the use_fabric() function at the beginning of your document
   
-  h1("You can take some notes below"), 
-  
-  fabric_drawing(cid = "canvas1", 
-                drawingColor = "darkblue", 
-                gumSize = 50)
+  fabric_drawing(cid = "canvas123")
+
 )
 
 server <- function(input, output){}
@@ -66,7 +63,7 @@ server <- function(input, output){}
 shinyApp(ui, server)
 ```
 
-![](man/figures/gumexample.gif)
+![](man/figures/example1.gif)
 
 ## fabric\_shape(): Render shape objects in canvas
 
