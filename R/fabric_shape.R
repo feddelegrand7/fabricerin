@@ -86,17 +86,17 @@ fabric_shape <- function(cid,
 
   if (shape == "Polygon" &
       is.null(poly) & is.null(polx)) {
-    stop("If you draw a Circle, you need to provide a radius")
+    stop("If you draw a Polygon, you need to se the polx and poly arguments")
   }
 
   if (shape == "Polygon" &
       is.null(polx)) {
-    stop("If you draw a Circle, you need to provide a radius")
+    stop("If you draw a Circle, you need to set the polx argument")
   }
 
   if (shape == "Polygon" &
       is.null(poly)) {
-    stop("If you draw a Circle, you need to provide a radius")
+    stop("If you draw a Circle, you need to set the poly argument")
   }
 
   if (shape == "Polygon" &
@@ -152,8 +152,16 @@ var {shapeId} = new fabric.{shape}(
 
 [{data}], {{
 
-fill: '{fill}'
-
+fill: '{fill}',
+left: {left},
+top: {top},
+width: {width},
+height: {height},
+angle: {angle},
+opacity: {opacity},
+stroke: '{strokecolor}',
+strokeWidth: {strokewidth},
+selectable: {selectable}
 
 }});
 

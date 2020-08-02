@@ -92,44 +92,130 @@ fabric_shape_add <- function(cid,
 
   if (!shape %in% c("Rect",
                     "Circle",
-                    "Triangle")) {
-    stop(paste0(shape, " shape is not available, choices are Rect, Circle and Triangle"))
+                    "Triangle",
+                    "Polygon")) {
+    stop(paste0(shape, " shape is not available, choices are Rect, Circle, Triangle and Polygon"))
   }
 
+
+  if (shape == "Polygon" &
+      is.null(poly) & is.null(polx)) {
+    stop("If you draw a Polygon, you need to se the polx and poly arguments")
+  }
+
+  if (shape == "Polygon" &
+      is.null(polx)) {
+    stop("If you draw a Circle, you need to set the polx argument")
+  }
+
+  if (shape == "Polygon" &
+      is.null(poly)) {
+    stop("If you draw a Circle, you need to set the poly argument")
+  }
+
+  if (shape == "Polygon" &
+
+      length(polx) != length(poly)
+
+  ){
+
+    stop("polx and poly must have the same length")
+
+  }
 
   if (shape == "Circle" &
       is.null(radius)) {
     stop("If you draw a Circle, you need to provide a radius")
   }
 
+  radius <-
+    ifelse(!is.null(radius), glue::glue("radius:{radius}"), "")
 
-  radius <- ifelse(!is.null(radius), glue::glue("radius:{radius}"), "")
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
-  htmltools::tags$script(htmltools::HTML(glue::glue(
-    "
+  isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
+
+
+  if(shape == "Polygon"){
+
+
+    data <- paste("{x:", polx, ", y:", poly, "}", collapse = ",")
+
+
+
+
+      htmltools::tags$script(htmltools::HTML(
+        glue::glue(
+          "
+var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
+
+{cid}.backgroundColor = '{cfill}';
+
+
+var {shapeId} = new fabric.{shape}(
+
+[{data}], {{
+
+fill: '{fill}',
+left: {left},
+top: {top},
+width: {width},
+height: {height},
+angle: {angle},
+opacity: {opacity},
+stroke: '{strokecolor}',
+strokeWidth: {strokewidth},
+selectable: {selectable}
+
+}});
+
+{cid}.add({shapeId});
+
+
+  "
+        )
+      )
+
+
+
+    )
+
+
+
+
+  } else {
+
+
+
+      htmltools::tags$script(htmltools::HTML(
+        glue::glue(
+          "
+
+var {cid} = new fabric.Canvas('{cid}', {{
+
+    isDrawingMode: {isDrawingMode}
+
+    }});
+
+{cid}.backgroundColor = '{cfill}';
+
 
 var {shapeId} = new fabric.{shape}({{
 
 left: {left},
-
 top: {top},
-
 fill: '{fill}',
-
 width: {width},
-
 height: {height},
-
 angle: {angle},
-
 opacity: {opacity},
-
 stroke: '{strokecolor}',
-
 strokeWidth: {strokewidth},
-
 selectable: {selectable},
 
 {radius}
@@ -140,7 +226,43 @@ selectable: {selectable},
 
 
   "
-  )))
+        )
+      )
+
+
+
+    )
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
