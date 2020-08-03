@@ -192,6 +192,9 @@ selectable: {selectable}
         height = cheight
       ),
 
+      fabric_dependency(),
+
+
 htmltools::tags$script(htmltools::HTML(
         glue::glue(
           "
