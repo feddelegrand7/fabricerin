@@ -11,10 +11,11 @@ status](https://travis-ci.com/feddelegrand7/fabricerin.svg?branch=master)](https
 
 The `fabricerin` (spelled **fabrikerine**) package allows you to create
 easily canvas elements within your Shiny app and RMarkdown documents.
-You can use the canvas to render shapes, images and text. You can also
-create a canvas for drawing/taking notes purposes. Under the hoods,
-`fabricerin` relies on the the [fabricjs](http://fabricjs.com/)
-JavaScript library.
+Thanks to [Garrick Aden-Buie](https://twitter.com/grrrck?lang=en), you
+can also use it with your xaringan slides. You can use the canvas to
+render shapes, images and text. You can also create a canvas for
+drawing/taking notes purposes. Under the hoods, `fabricerin` relies on
+the the [fabricjs](http://fabricjs.com/) JavaScript library.
 
 Fore more information, you can have a look at the following
 [Tutorial](https://ihaddadenfodil.com/post/fabricering-a-tutorial/)
