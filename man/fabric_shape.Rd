@@ -23,8 +23,8 @@ fabric_shape(
   selectable = TRUE,
   isDrawingMode = FALSE,
   radius = NULL,
-  polx = NULL,
-  poly = NULL
+  xPolygon = NULL,
+  yPolygon = NULL
 )
 }
 \arguments{
@@ -64,9 +64,9 @@ fabric_shape(
 
 \item{radius}{mandatory if the chosen shape is a 'Circle'. Defaults to NULL}
 
-\item{polx}{a vector of the coordinate points of the polygon, from the left.}
+\item{xPolygon}{a vector of the coordinate points of the polygon, from the left.}
 
-\item{poly}{a vector of the coordinate points of the polygon, from the top}
+\item{yPolygon}{a vector of the coordinate points of the polygon, from the top}
 }
 \value{
 a shape object inside a canvas

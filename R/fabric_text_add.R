@@ -106,6 +106,9 @@ fabric_text_add <- function(cid,
   tBG <- ifelse(is.null(textBackgroundColor), character(0), glue::glue("textBackgroundColor: '{textBackgroundColor}',"))
 
 
+  htmltools::tagList(
+
+    fabric_dependency(),
 
     htmltools::tags$script(htmltools::HTML(glue::glue(
 
@@ -144,7 +147,7 @@ fabric_text_add <- function(cid,
 
 
 
-  )
+  ))
 
 
 

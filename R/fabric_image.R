@@ -75,6 +75,9 @@ fabric_image <- function(
 
     htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
+    fabric_dependency(),
+
+
     htmltools::tags$script(htmltools::HTML(glue::glue(
 
 

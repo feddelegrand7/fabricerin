@@ -55,9 +55,10 @@ htmltools::tagList(
 
   htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
-  htmltools::tags$script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"),
+  fabric_dependency(),
 
-  htmltools::tags$script(src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"),
+  filesaver_dependency(),
+
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
@@ -79,9 +80,6 @@ const {cid} = new fabric.Canvas('{cid}', {{
 {cid}drawingColorEl.onchange = function() {{
     {cid}.freeDrawingBrush.color = {cid}drawingColorEl.value;
   }};
-
-
-
 
 
  $('#erase{cid}').click(function(){{

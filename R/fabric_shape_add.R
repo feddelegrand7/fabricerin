@@ -17,6 +17,9 @@
 #' @param strokewidth the stroke width of the shape. Defaults to 5.
 #' @param selectable logical. If TRUE, the user can modify interactively the shape. Defaults to TRUE
 #' @param radius Mandatory if the chosen shape is a 'Circle'. Defaults to NULL
+#' @param xPolygon a vector of the coordinate points of the polygon, from the left.
+#' @param yPolygon a vector of the coordinate points of the polygon, from the top
+
 #'
 #' @return a shape object inside a preexisting canvas element
 #' @export
@@ -87,7 +90,9 @@ fabric_shape_add <- function(cid,
                              strokecolor = "darkblue",
                              strokewidth = 5,
                              selectable = TRUE,
-                             radius = NULL){
+                             radius = NULL,
+                             xPolygon = NULL,
+                             yPolygon = NULL){
 
 
   if (!shape %in% c("Rect",
@@ -99,27 +104,27 @@ fabric_shape_add <- function(cid,
 
 
   if (shape == "Polygon" &
-      is.null(poly) & is.null(polx)) {
-    stop("If you draw a Polygon, you need to se the polx and poly arguments")
+      is.null(yPolygon) & is.null(xPolygon)) {
+    stop("If you draw a Polygon, you need to set the xPolygon and yPolygon arguments")
   }
 
   if (shape == "Polygon" &
-      is.null(polx)) {
-    stop("If you draw a Circle, you need to set the polx argument")
+      is.null(xPolygon)) {
+    stop("If you draw a Polygon, you need to set the xPolygon argument")
   }
 
   if (shape == "Polygon" &
-      is.null(poly)) {
-    stop("If you draw a Circle, you need to set the poly argument")
+      is.null(yPolygon)) {
+    stop("If you draw a Polygon, you need to set the yPolygon argument")
   }
 
   if (shape == "Polygon" &
 
-      length(polx) != length(poly)
+      length(xPolygon) != length(yPolygon)
 
   ){
 
-    stop("polx and poly must have the same length")
+    stop("xPolygon and yPolygon must have the same length")
 
   }
 
@@ -140,7 +145,7 @@ fabric_shape_add <- function(cid,
   if(shape == "Polygon"){
 
 
-    data <- paste("{x:", polx, ", y:", poly, "}", collapse = ",")
+    data <- paste("{x:", xPolygon, ", y:", yPolygon, "}", collapse = ",")
 
 
 
@@ -191,6 +196,9 @@ selectable: {selectable}
   } else {
 
 
+    htmltools::tagList(
+
+      fabric_dependency(),
 
       htmltools::tags$script(htmltools::HTML(
         glue::glue(
@@ -231,10 +239,7 @@ selectable: {selectable},
 
 
 
-    )
-
-
-
+    ))
 
 
   }

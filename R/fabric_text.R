@@ -117,6 +117,8 @@ fabric_text <- function(cid,
 
     htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
+    fabric_dependency(),
+
     htmltools::tags$script(htmltools::HTML(glue::glue(
 
 

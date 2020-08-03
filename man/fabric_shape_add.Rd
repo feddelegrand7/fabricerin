@@ -18,7 +18,9 @@ fabric_shape_add(
   strokecolor = "darkblue",
   strokewidth = 5,
   selectable = TRUE,
-  radius = NULL
+  radius = NULL,
+  xPolygon = NULL,
+  yPolygon = NULL
 )
 }
 \arguments{
@@ -49,6 +51,10 @@ fabric_shape_add(
 \item{selectable}{logical. If TRUE, the user can modify interactively the shape. Defaults to TRUE}
 
 \item{radius}{Mandatory if the chosen shape is a 'Circle'. Defaults to NULL}
+
+\item{xPolygon}{a vector of the coordinate points of the polygon, from the left.}
+
+\item{yPolygon}{a vector of the coordinate points of the polygon, from the top}
 }
 \value{
 a shape object inside a preexisting canvas element
