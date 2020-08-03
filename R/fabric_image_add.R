@@ -23,9 +23,6 @@
 #' img2 <- "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png"
 #' ui <- fluidPage(
 #'
-#' use_fabric(),
-#'
-#'
 #'
 #' fabric_image(cid = "cimage",
 #'              imgId = "Rimg",

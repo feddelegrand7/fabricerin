@@ -30,7 +30,6 @@
 #'
 #' ui <- fluidPage(
 #'
-#' use_fabric(),
 #'
 #' fabric_shape(cid = "canvas",
 #'              shapeId = "shape1",
