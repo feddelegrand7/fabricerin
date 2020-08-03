@@ -65,10 +65,6 @@ fabric_image_add <- function(cid,
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
-  htmltools::tagList(
-
-    fabric_dependency(),
-
 
   htmltools::tags$script(htmltools::HTML(
     glue::glue(
@@ -100,7 +96,7 @@ fabric_image_add <- function(cid,
 
       "
     )
-  )))
+  ))
 
 
 

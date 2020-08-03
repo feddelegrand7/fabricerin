@@ -153,14 +153,6 @@ fabric_shape_add <- function(cid,
       htmltools::tags$script(htmltools::HTML(
         glue::glue(
           "
-var {cid} = new fabric.Canvas('{cid}', {{
-
-    isDrawingMode: {isDrawingMode}
-
-    }});
-
-{cid}.backgroundColor = '{cfill}';
-
 
 var {shapeId} = new fabric.{shape}(
 
@@ -196,23 +188,10 @@ selectable: {selectable}
   } else {
 
 
-    htmltools::tagList(
-
-      fabric_dependency(),
 
       htmltools::tags$script(htmltools::HTML(
         glue::glue(
           "
-
-var {cid} = new fabric.Canvas('{cid}', {{
-
-    isDrawingMode: {isDrawingMode}
-
-    }});
-
-{cid}.backgroundColor = '{cfill}';
-
-
 var {shapeId} = new fabric.{shape}({{
 
 left: {left},
@@ -239,7 +218,7 @@ selectable: {selectable},
 
 
 
-    ))
+    )
 
 
   }

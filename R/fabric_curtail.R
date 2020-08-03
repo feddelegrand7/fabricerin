@@ -56,9 +56,7 @@ fabric_curtail <- function(cid,
   type <- ifelse(type == "background", "setBackgroundImage", "setOverlayImage")
 
 
-  htmltools::tagList(
 
-    fabric_dependency(),
 
     htmltools::tags$script(htmltools::HTML(glue::glue("
 
@@ -80,7 +78,7 @@ fabric_curtail <- function(cid,
 
 
 
-  )
+
 
 
 
