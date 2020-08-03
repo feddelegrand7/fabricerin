@@ -5,14 +5,26 @@
 #' @export
 #'
 #' @description This function activates the javascript library fabricjs. You should put it at the beginning of your Rmd document or Shiny UI.
-#' Note that you'll need to be connected to the internet.
 #'
 
 
 
-use_fabric <- function(){
+use_fabric <- function() {
+  htmltools::tagList(
+    html_dependency_fabric()
+  )
+}
 
-
-  htmltools::tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/fabric.min.js")
-
+html_dependency_fabric <- function() {
+  htmltools::htmlDependency(
+    name = "fabric",
+    version = "3.6.3",
+    package = "fabricerin",
+    src = c(
+      file = "fabric",
+      href = "https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.3/"
+    ),
+    script = "fabric.min.js",
+    all_files = FALSE
+  )
 }

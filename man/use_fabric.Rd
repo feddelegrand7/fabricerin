@@ -11,5 +11,4 @@ called for the side effect of activating the fabricjs library
 }
 \description{
 This function activates the javascript library fabricjs. You should put it at the beginning of your Rmd document or Shiny UI.
-Note that you'll need to be connected to the internet.
 }
