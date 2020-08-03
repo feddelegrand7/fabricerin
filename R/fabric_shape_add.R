@@ -139,7 +139,6 @@ fabric_shape_add <- function(cid,
 
   selectable <- ifelse(selectable == TRUE, "true", "false")
 
-  isDrawingMode <- ifelse(isDrawingMode == TRUE, "true", "false")
 
 
   if(shape == "Polygon"){
