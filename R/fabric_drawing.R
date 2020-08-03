@@ -59,6 +59,8 @@ htmltools::tagList(
 
   filesaver_dependency(),
 
+  jquery_dependency(),
+
 
   htmltools::tags$script(htmltools::HTML(glue::glue(
     "
