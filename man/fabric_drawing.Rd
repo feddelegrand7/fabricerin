@@ -37,7 +37,6 @@ if (interactive()) {
 
 ui <- fluidPage(
 
-   use_fabric(),
 
    h1("Draw some stuff here"),
 

@@ -80,7 +80,6 @@ if(interactive()){
 
 ui <- fluidPage(
 
-use_fabric(),
 
 h2("Below you'll find a red Rectangle with a darkblue stroke"),
 

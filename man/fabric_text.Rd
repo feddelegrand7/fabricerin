@@ -103,7 +103,6 @@ if (interactive()) {
 
 ui <- fluidPage(
 
-use_fabric(),
 
 fabric_text(cid = "can",
          textId = "text",

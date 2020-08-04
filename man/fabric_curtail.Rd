@@ -27,7 +27,6 @@ img <- "https://st.depositphotos.com/1642482/1904/i/950/depositphotos_19049237-s
 
 ui <- fluidPage(
 
-use_fabric(),
 
 
 fabric_shape(cid = "canvas123",

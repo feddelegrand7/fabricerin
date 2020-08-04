@@ -1,4 +1,11 @@
 
+#' Create an HTML dependency for FileSaver.js
+#'
+#' @rdname html-dependencies
+#' @export
+#'
+#'
+
 
 
 filesaver_dependency <- function() {

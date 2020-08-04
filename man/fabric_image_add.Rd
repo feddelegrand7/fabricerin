@@ -57,9 +57,6 @@ img1 <- "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/72
 img2 <- "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/dplyr.png"
 ui <- fluidPage(
 
-use_fabric(),
-
-
 
 fabric_image(cid = "cimage",
              imgId = "Rimg",

@@ -71,7 +71,6 @@ img <- "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724
 
 ui <- fluidPage(
 
-use_fabric(),
 
 fabric_image(cid = "cimage",
              cfill = "lightblue",

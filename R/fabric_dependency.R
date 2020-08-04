@@ -1,5 +1,10 @@
 
-
+#' Create an HTML dependency for fabric.js
+#'
+#' @rdname html-dependencies
+#' @export
+#'
+#'
 
 
 fabric_dependency <- function() {
