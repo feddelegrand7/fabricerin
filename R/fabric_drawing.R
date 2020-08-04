@@ -44,13 +44,18 @@ fabric_drawing <- function(cid,
 htmltools::tagList(
 
 
-  htmltools::tags$input(id=glue::glue("erase{cid}"), type="checkbox", " Gum"),
+  htmltools::HTML(glue::glue("
 
-  htmltools::tags$input(id=glue::glue("export{cid}"), type="button", value = "Export"),
+  <input id = erase{cid} type = 'checkbox' name = 'Gum'>
 
-  htmltools::tags$input(id = glue::glue("{cid}drawing-color"), type = "color", value = "#005E7A"),
+  <input id = export{cid} type = 'button' value = 'Export'>
 
-  htmltools::tags$br(),  htmltools::tags$br(),
+  <input id = {cid}drawing-color type = 'color' value = '#005E7A'>
+
+
+
+
+                             ")),
 
   htmltools::tags$canvas(id = cid, width = cwidth, height = cheight),
 
