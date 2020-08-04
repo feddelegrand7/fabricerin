@@ -46,14 +46,11 @@ htmltools::tagList(
 
   htmltools::HTML(glue::glue("
 
-  <input id = erase{cid} type = 'checkbox' name = 'Gum'>
+  <input id = erase{cid} type = 'checkbox' title='Check it to erase !>
 
-  <input id = export{cid} type = 'button' value = 'Export'>
+  <input id = {cid}drawing-color type = 'color' value = '#005E7A' style = 'width:30px;'>
 
-  <input id = {cid}drawing-color type = 'color' value = '#005E7A'>
-
-
-
+  <input id = export{cid} type = 'button' style = 'width:55px;' value = 'Export'>
 
                              ")),
 
