@@ -17,8 +17,8 @@ render shapes, images and text. You can also create a canvas for
 drawing/taking notes purposes. Under the hoods, `fabricerin` relies on
 the the [fabricjs](http://fabricjs.com/) JavaScript library.
 
-Fore more information, you can have a look at the following
-[Tutorial](https://ihaddadenfodil.com/post/fabricering-a-tutorial/)
+
+
 
 ## Installation
 
@@ -34,8 +34,8 @@ remotes::install_github("feddelegrand7/fabricerin")
 ## Examples:
 
 First of all, I’d like to state that all the example provided apply the
-same way to Shiny and Rmd documents. `fabricerin` is not an R wrapper
-for the fabricjs library. The package doesn’t cover all the capabilities
+same way to Shiny and Rmd documents (in Rmd use the functions directely (e.g. without wrapping them inside *fluidPage()*). Note that`fabricerin` is not an R wrapper
+for the fabricjs library in the sense that it doesn’t cover all the capabilities
 of the library. The `fabricerin` package relies only on some specified
 features that according to me will help Shiny/Rmd users. Of course, if
 you need some improvement, feel free to create a Pull Request.
