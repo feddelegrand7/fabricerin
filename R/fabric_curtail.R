@@ -70,15 +70,10 @@ fabric_curtail <- function(cid,
           originY: 'top'
        }});
        {cid}.{type}(img, {cid}.renderAll.bind({cid}));
-   }});
+   }}, {{ crossOrigin: 'anonymous'}});
 
 
                                     ")))
-
-
-
-
-
 
 
 }
