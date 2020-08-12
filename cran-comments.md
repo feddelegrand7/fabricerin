@@ -12,7 +12,8 @@ Duration: 1m 10.1s
 0 errors √ | 0 warnings √ | 0 notes √
 
 
-
+- fabric, jQuery and FileSaver dependencies set using the htmlDependency() function. The user doesn't need an internet connexion to run the JS dependencies. 
+- Possibility to use the packge smoothly with xaringan and other slides RMarkdown format
 - Bugs fixed.
 - Possibility to choose a color for the drawing.
 - Possibility to export a canvas that contains an image.
