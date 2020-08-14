@@ -7,6 +7,22 @@
 
 [![Travis build
 status](https://travis-ci.com/feddelegrand7/fabricerin.svg?branch=master)](https://travis-ci.com/feddelegrand7/fabricerin)
+
+[![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![metacran
+downloads](https://cranlogs.r-pkg.org/badges/grand-total/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+
+[![R
+badge](https://img.shields.io/badge/Build%20with-♥%20JS%20and%20R-pink)](https://github.com/feddelegrand7/fabricerin)
+
 <!-- badges: end -->
 
 The `fabricerin` (spelled **fabrikerine**) package allows you to create
@@ -17,10 +33,18 @@ render shapes, images and text. You can also create a canvas for
 drawing/taking notes purposes. Under the hoods, `fabricerin` relies on
 the the [fabricjs](http://fabricjs.com/) JavaScript library.
 
-
-
+Fore more information, you can have a look at the following
+[Tutorial](https://ihaddadenfodil.com/post/fabricering-a-tutorial/)
 
 ## Installation
+
+You can install `fabricerin` from
+[CRAN](https://CRAN.R-project.org/package=fabricerin) with:
+
+``` r
+
+install.packages("fabricerin")
+```
 
 You can install the development version from
 [GitHub](https://github.com/) with:
@@ -34,8 +58,8 @@ remotes::install_github("feddelegrand7/fabricerin")
 ## Examples:
 
 First of all, I’d like to state that all the example provided apply the
-same way to Shiny and Rmd documents (in Rmd use the functions directely (e.g. without wrapping them inside *fluidPage()*). Note that`fabricerin` is not an R wrapper
-for the fabricjs library in the sense that it doesn’t cover all the capabilities
+same way to Shiny and Rmd documents. `fabricerin` is not an R wrapper
+for the fabricjs library. The package doesn’t cover all the capabilities
 of the library. The `fabricerin` package relies only on some specified
 features that according to me will help Shiny/Rmd users. Of course, if
 you need some improvement, feel free to create a Pull Request.

@@ -16,7 +16,21 @@ knitr::opts_chunk$set(
 # fabricerin
 
 <!-- badges: start -->
+
 [![Travis build status](https://travis-ci.com/feddelegrand7/fabricerin.svg?branch=master)](https://travis-ci.com/feddelegrand7/fabricerin)
+
+[![CRAN_time_from_release](https://www.r-pkg.org/badges/ago/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![CRAN_latest_release_date](https://www.r-pkg.org/badges/last-release/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/grand-total/fabricerin)](https://cran.r-project.org/package=fabricerin)
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
+
+[![R badge](https://img.shields.io/badge/Build%20with-♥%20JS%20and%20R-pink)](https://github.com/feddelegrand7/fabricerin)
+
 <!-- badges: end -->
 
 The `fabricerin` (spelled __fabrikerine__) package allows you to create easily canvas elements within your Shiny app and RMarkdown documents. Thanks to [Garrick Aden-Buie](https://twitter.com/grrrck?lang=en), you can also use it within your xaringan slides. You can use the canvas to render shapes, images and text. You can also create a canvas for drawing/taking notes purposes. Under the hoods, `fabricerin` relies on the the [fabricjs](http://fabricjs.com/) JavaScript library. 
@@ -27,6 +41,14 @@ Fore more information, you can have a look at the following [Tutorial](https://i
 
 
 ## Installation
+
+You can install `fabricerin` from [CRAN](https://CRAN.R-project.org/package=fabricerin) with: 
+
+```{r, eval=FALSE}
+
+install.packages("fabricerin")
+
+```
 
 
 You can install the development version from [GitHub](https://github.com/) with:
