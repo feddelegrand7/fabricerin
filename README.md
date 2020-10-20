@@ -91,7 +91,7 @@ shinyApp(ui, server)
 
 -----
 
-Currently, `fabricerin` supports three types of shapes: Rectangle,
+Currently, `fabricerin` supports four types of shapes: Rectangle,
 Triangle, Circle and Polygon. The user can interact with the shape and
 modify its position, size and rotation. If you want to disable this
 interactivity, you can set `selectable =FALSE`
