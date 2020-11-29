@@ -7,19 +7,13 @@
 
 [![Travis build
 status](https://travis-ci.com/feddelegrand7/fabricerin.svg?branch=master)](https://travis-ci.com/feddelegrand7/fabricerin)
-
 [![CRAN\_time\_from\_release](https://www.r-pkg.org/badges/ago/fabricerin)](https://cran.r-project.org/package=fabricerin)
-
 [![CRAN\_latest\_release\_date](https://www.r-pkg.org/badges/last-release/fabricerin)](https://cran.r-project.org/package=fabricerin)
-
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/fabricerin)](https://cran.r-project.org/package=fabricerin)
-
 [![metacran
 downloads](https://cranlogs.r-pkg.org/badges/grand-total/fabricerin)](https://cran.r-project.org/package=fabricerin)
-
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://choosealicense.com/licenses/mit/)
-
 [![R
 badge](https://img.shields.io/badge/Build%20with-♥%20JS%20and%20R-pink)](https://github.com/feddelegrand7/fabricerin)
 
