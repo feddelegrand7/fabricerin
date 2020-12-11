@@ -27,8 +27,6 @@ render shapes, images and text. You can also create a canvas for
 drawing/taking notes purposes. Under the hoods, `fabricerin` relies on
 the the [fabricjs](http://fabricjs.com/) JavaScript library.
 
-Fore more information, you can have a look at the following
-[Tutorial](https://ihaddadenfodil.com/post/fabricering-a-tutorial/)
 
 ## Installation
 
@@ -40,14 +38,6 @@ You can install `fabricerin` from
 install.packages("fabricerin")
 ```
 
-You can install the development version from
-[GitHub](https://github.com/) with:
-
-``` r
-# install.packages("remotes")
-
-remotes::install_github("feddelegrand7/fabricerin")
-```
 
 ## Examples:
 
