@@ -296,6 +296,9 @@ shinyApp(ui = ui, server = server)
 You can set an image as a background or as a foreground (overlay) for a
 canvas as follows:
 
+> Note that due to security reasons, you won’t be able to replicate the
+> following example on some images’ sources.
+
 ``` r
 ui <- fluidPage(
 
@@ -319,9 +322,6 @@ shinyApp(ui = ui, server = server)
 ```
 
 ![](man/figures/example8.png)
-
-> Note that due to security reasons, you won’t be able to replicate the
-> above example on some images’ sources.
 
 ## Code of Conduct
 
