@@ -22,10 +22,11 @@ badge](https://img.shields.io/badge/Build%20with-♥%20JS%20and%20R-pink)](https
 The `fabricerin` (spelled **fabrikerine**) package allows you to create
 easily canvas elements within your Shiny app and RMarkdown documents.
 Thanks to [Garrick Aden-Buie](https://twitter.com/grrrck?lang=en), you
-can also use it within your xaringan slides. You can use the canvas to
-render shapes, images and text. You can also create a canvas for
-drawing/taking notes purposes. Under the hoods, `fabricerin` relies on
-the [fabricjs](http://fabricjs.com/) JavaScript library.
+can also use it within your
+[xaringan](https://github.com/yihui/xaringan) slides. You can use the
+canvas to render shapes, images and text. You can also create a canvas
+for drawing/taking notes purposes. Under the hoods, `fabricerin` relies
+on the [fabricjs](http://fabricjs.com/) JavaScript library.
 
 ## Installation
 
@@ -54,7 +55,7 @@ of the library. The `fabricerin` package relies only on some specified
 features that according to me will help Shiny/Rmd users. Of course, if
 you need some improvement, feel free to create a Pull Request.
 
-### fabric\_drawing(): Create a canvas for taking notes
+### `fabric_drawing()` Create a canvas for taking notes
 
 ------------------------------------------------------------------------
 
@@ -89,7 +90,7 @@ shinyApp(ui, server)
 
 ![](man/figures/example1.gif)
 
-## fabric\_shape(): Render shape objects in canvas
+## `fabric_shape()` Render shape objects in canvas
 
 ------------------------------------------------------------------------
 
@@ -175,7 +176,7 @@ shinyApp(ui, server)
 
 ![](man/figures/example4.png)
 
-## fabric\_image(): Render images in canvas
+## `fabric_image()` Render images in canvas
 
 ------------------------------------------------------------------------
 
@@ -230,7 +231,7 @@ shinyApp(ui = ui, server = server)
 
 ![](man/figures/r_dplyr_logo.png)
 
-## fabric\_text(): Render text elements in canvas
+## `fabric_text()` Render text elements in canvas
 
 ------------------------------------------------------------------------
 
@@ -290,7 +291,7 @@ shinyApp(ui = ui, server = server)
 
 ![](man/figures/example7.png)
 
-## fabric\_curtail(): Add a background or an overlay image to a canvas
+## `fabric_curtail()` Add a background or an overlay image to a canvas
 
 You can set an image as a background or as a foreground (overlay) for a
 canvas as follows:
@@ -318,6 +319,9 @@ shinyApp(ui = ui, server = server)
 ```
 
 ![](man/figures/example8.png)
+
+> Note that due to security reasons, you won’t be able to replicate the
+> above example on some images’ sources.
 
 ## Code of Conduct
 

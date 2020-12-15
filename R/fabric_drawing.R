@@ -75,7 +75,6 @@ const {cid} = new fabric.Canvas('{cid}', {{
 
 {cid}.freeDrawingBrush.width  = {drawingWidth};
 
-
 {cid}drawingColorEl = document.getElementById('{cid}drawing-color');
 
 {cid}.freeDrawingBrush.color = {cid}drawingColorEl.value;
@@ -102,14 +101,11 @@ const {cid} = new fabric.Canvas('{cid}', {{
 }});
 
 
-
-
-
  $('#erase{cid}').click(function(){{
 
     if (this.checked) {{
 
-      {cid}.freeDrawingBrush.width   = {gumSize};
+      {cid}.freeDrawingBrush.width = {gumSize};
 
     }} else {{
 
@@ -132,11 +128,6 @@ $('#export{cid}').click(function(){{
 
 
 }});
-
-
-
-
-
 
 
   "
