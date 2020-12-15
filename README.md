@@ -25,8 +25,7 @@ Thanks to [Garrick Aden-Buie](https://twitter.com/grrrck?lang=en), you
 can also use it within your xaringan slides. You can use the canvas to
 render shapes, images and text. You can also create a canvas for
 drawing/taking notes purposes. Under the hoods, `fabricerin` relies on
-the the [fabricjs](http://fabricjs.com/) JavaScript library.
-
+the [fabricjs](http://fabricjs.com/) JavaScript library.
 
 ## Installation
 
@@ -34,10 +33,17 @@ You can install `fabricerin` from
 [CRAN](https://CRAN.R-project.org/package=fabricerin) with:
 
 ``` r
-
 install.packages("fabricerin")
 ```
 
+You can install the development version from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+
+remotes::install_github("feddelegrand7/fabricerin")
+```
 
 ## Examples:
 
@@ -50,7 +56,19 @@ you need some improvement, feel free to create a Pull Request.
 
 ### fabric\_drawing(): Create a canvas for taking notes
 
------
+------------------------------------------------------------------------
+
+`fabric_drawing()` is pretty useful when you want to teach something and
+write some notes at the same time, below I provide an example using the
+`xaringan` package. Inside a `xaringan` slide you can just (for example)
+run R code in the left and take notes in the right:
+
+> Important: When you change a color, make sure that the **erase** box
+> is not checked.
+
+![](man/figures/t_example.gif)
+
+`fabric_drawing()` can be used the same way in Shiny:
 
 ``` r
 library(shiny)
@@ -73,15 +91,14 @@ shinyApp(ui, server)
 
 ## fabric\_shape(): Render shape objects in canvas
 
------
+------------------------------------------------------------------------
 
-Currently, `fabricerin` supports four types of shapes: Rectangle,
+Currently, `fabricerin` supports three types of shapes: Rectangle,
 Triangle, Circle and Polygon. The user can interact with the shape and
 modify its position, size and rotation. If you want to disable this
 interactivity, you can set `selectable =FALSE`
 
 ``` r
-
 library(shiny)
 library(fabricerin)
 
@@ -160,14 +177,13 @@ shinyApp(ui, server)
 
 ## fabric\_image(): Render images in canvas
 
------
+------------------------------------------------------------------------
 
 You can insert an image within a canvas a play with it using the
 `fabric_image()` function. Note that this function accepts only URL
 external images.
 
 ``` r
-
 ui <- fluidPage(
 
 fabric_image(cid = "cimage",
@@ -216,13 +232,12 @@ shinyApp(ui = ui, server = server)
 
 ## fabric\_text(): Render text elements in canvas
 
------
+------------------------------------------------------------------------
 
 The `fabric_text()` function has many arguments, feel free to check them
 out:
 
 ``` r
-
 ui <- fluidPage(
 
 fabric_text(cid = "cId",
@@ -247,7 +262,6 @@ Here also, we can use the `fabric_text_add()` function to incorporate a
 text object within a canvas element:
 
 ``` r
-
 library(shiny)
 library(fabricerin)
 
@@ -282,7 +296,6 @@ You can set an image as a background or as a foreground (overlay) for a
 canvas as follows:
 
 ``` r
-
 ui <- fluidPage(
 
  fabric_shape(cid = "canvas123",
