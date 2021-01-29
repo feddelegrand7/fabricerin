@@ -10,7 +10,7 @@ Authors@R: c(
 Description: Allows the user to implement easily canvas elements within a 'shiny' app or an 'RMarkdown' document. 
     The user can create shapes, images and text elements within the canvas which can also be used as a drawing tool for taking notes.
     The package relies on the 'fabricjs' 'JavaScript' library. See <http://fabricjs.com/>.
-License: MIT + file LICENSE
+License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
