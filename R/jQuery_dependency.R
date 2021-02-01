@@ -4,7 +4,7 @@
 #' Create an HTML dependency for jQuery
 #'
 #' @rdname html-dependencies
-#' @export
+#' @noRd
 #'
 #'
 

@@ -2,7 +2,7 @@
 #' Create an HTML dependency for fabric.js
 #'
 #' @rdname html-dependencies
-#' @export
+#' @noRd
 #'
 #'
 
